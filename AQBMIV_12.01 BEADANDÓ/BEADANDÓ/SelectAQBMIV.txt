@@ -1,0 +1,40 @@
+1)	Kérdezzük le az egyes Fodrászok nevét és életkorát
+	Select Név, Kor From Fodrász
+
+
+2)	Irassuk ki a legfiatalab Tulajdonos nevét és életkorát
+	Select Név, MIN(Kor) as Életkor From Tulajdonos
+
+
+3)	Irassuk ki a különböző szakterületeket úgy hogy mindegyik csak egyszer szerepeljen
+	Select Distinct Szakterület From Szakterület
+
+
+4)	Irassuk ki az átlagos fizetés értékét.
+	Select AVG(Fizetés) From Alkalmazza
+
+
+5)	Irassuk ki a legidősebb Fodrász nevét és azonosítóját
+	Select MAX(Kor) From Fodrász
+
+
+
+6)	Listázzuk a ’K’ kezdőbetűjű emberek adatait.
+SELECT * FROM Fodrász WHERE Név LIKE 'K%'
+
+
+8)	Irassuk ki hogy ki volt az a beszállító aki a 2019-es évben hozott árut.
+SELECT Beszállító.név AS Legkorábbi FROM Beszállító
+JOIN Szállít on Szállít.BID=Beszállító.BID
+JOIN Üzlet on Szállít.UzID=Üzlet.UzID
+WHERE Szállít.átadás like '%2019' 
+
+
+9)	Kérdezzük le az átlagosnál fiatalabb tulajdonosok nevét és életkorát.
+SELECT Név, Kor FROM Tulajdonos WHERE Kor < (SELECT AVG(Kor) FROM Tulajdonos);
+
+10)	Írassuk ki a Fodrászok és a Főnökeik kapcsolatát. (Ki az akinek nincs „párja”?)
+SELECT  Fodrász.Név , Tulajdonos.Név FROM Alkalmazza
+right OUTER JOIN Fodrász on Fodrász.FID = Alkalmazza.FID 
+full outer join Tulajdonos on Tulajdonos.TID = Alkalmazza.TID
+order by Fodrász.Név

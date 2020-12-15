@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.keszitette{
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.keszitette h1{
+    font-weight: 400;
+}
+
+#content{
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    padding-bottom: 3vh;
+}
+
+table{
+    padding-top:3vh;
+    margin: auto;
+    width: 100%;
+}
+
+th{
+    min-width: 200px;
+    border: 1px solid black;
+}
+
+a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+.adatok{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.adatok tr{
+    border: solid;
+    border-width: 1px 0;
+}
+
+form{
+    padding-top: 2vh;
+    width: 20%;
+    margin:auto;
+    text-align: start;
+}
+
+input, select{
+    margin-bottom: 1vh;
+}
+
+input[type="submit"]{
+    margin-top:1vh;
+    padding: 10px;
+    border-radius: 3px;
+    cursor:pointer;
+}

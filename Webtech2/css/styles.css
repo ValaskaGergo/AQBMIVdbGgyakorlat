@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+table{
+    padding-top: 3vh;
+    margin: auto;
+    text-align: center;
+}
+
+th, tr{
+    min-width: 100px;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: rgb(255, 73, 73);
+}
